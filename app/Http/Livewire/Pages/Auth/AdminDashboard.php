@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Pages\Auth;
+namespace App\Http\Livewire\Pages\Auth;
 
 use Livewire\Component;
 use App\Models\CarSpecification;

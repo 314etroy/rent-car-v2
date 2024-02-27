@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Livewire\Pages\Guest;
+namespace App\Http\Livewire\Pages\Guest;
 
 use Livewire\Component;
 use Illuminate\Contracts\View\View;

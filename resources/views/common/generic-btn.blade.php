@@ -1,6 +1,6 @@
 @props([
     'class' => '',
-    'wire_click' => null,
+    'wire_method' => null,
     'btn_content' => '',
     'data_modal_target' => '',
     'data_modal_show' => '',
@@ -12,7 +12,7 @@
 <button 
 {!! setProperties('class', $class) !!}
 {!! setProperties('disabled', $is_disabled) !!}
-{!! setProperties('wire:click', $wire_click) !!}
+{!! setProperties('wire:click', $wire_method) !!}
 {!! setProperties('data-modal-target', $data_modal_target) !!}
 {!! setProperties('data-modal-show', $data_modal_show) !!}
 {!! setProperties('data-modal-row-id', $data_modal_row_id) !!}
