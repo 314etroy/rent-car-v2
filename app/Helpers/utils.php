@@ -4,7 +4,6 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Support\Arr;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,6 +32,13 @@ function dinamicRoutes($rutaSiCheileDeTraducere, $controllerulRutelor)
 | With checkPrefix() method you check in controller if selected language is the language we set in config -> app.supported_languages
 |
 */
+
+// public function howToEmit()
+// {
+//     // $this->emit('show', 111);
+//     // $this->emitTo('components.services-modal', 'show', '1111');
+// }
+
 
 function checkPrefix($string)
 {

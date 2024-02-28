@@ -33,15 +33,10 @@ Route::get('/' . __('messages.airport_transfer'), [HandleRoute::class, 'show_air
 Route::get('/' . __('messages.rental_conditions'), [HandleRoute::class, 'show_rental_conditions'])->name('rental_conditions');
 Route::get('/' . __('messages.cancellation_policy'), [HandleRoute::class, 'show_cancellation_policy'])->name('cancellation_policy');
 Route::get('/' . __('messages.terms_and_conditions'), [HandleRoute::class, 'show_terms_and_conditions'])->name('terms_and_conditions');
-Route::get('/' . __('messages.dashboard'), [HandleRoute::class, 'show_dashboard'])->middleware(['auth', 'verified'])->name('dashboard');
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::middleware(['auth', 'verified'])->group(function () {
+    Route::get('/' . __('messages.dashboard'), [HandleRoute::class, 'show_dashboard'])->name('dashboard');
+});
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');

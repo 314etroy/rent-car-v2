@@ -1,4 +1,14 @@
-<x-app-layout>
+@extends('layouts.app')
+
+@section('page_title')
+    {{ 'Profile' }}
+@endsection
+
+@push('css')
+    {{-- Zona pentru css-urile folosite la nivel de pagina --}}
+@endpush
+
+@section('content')
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 dark:text-gray-200 leading-tight">
             {{ __('Profile') }}
@@ -26,4 +36,8 @@
             </div>
         </div>
     </div>
-</x-app-layout>
+@endsection
+
+@push('js')
+    {{-- Zona pentru js-urile folosite la nivel de pagina --}}
+@endpush

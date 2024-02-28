@@ -79,7 +79,7 @@
             <div>
                 @include('common.generic-btn', [
                     'btn_content' => 'Adauga serviciu',
-                    'wire_method' => 'changeSection("1")',
+                    'wire_method' => '$emit(`show`, `111`)',
                     'data_modal_target' => $modalCreateId,
                     'data_modal_show' => $modalCreateId,
                     'class' =>
@@ -119,16 +119,15 @@
                                 'data_modal_target' => $modalEditId,
                                 'data_modal_show' => $modalEditId,
                                 // 'onclick' => 'getId(' . $index . ',' . json_encode($rowData) . ', "additionalServices")',
-                                'wire_click' => '$dispatchTo(`foo`, `show`, { postId: 1 })',
+                                'wire_method' => '$emit(`show`, `111`)',
                                 'class' => 'font-medium text-blue-600 dark:text-blue-500 hover:underline mr-2',
                             ])
-                            
-                            <button wire:click="$dispatch('show', '123')">Apasa</button>
                             
                             @include('common.generic-btn', [
                                 'btn_content' => 'Sterge',
                                 'data_modal_target' => $modalDeleteId,
                                 'data_modal_show' => $modalDeleteId,
+                                'wire_method' => '$emit(`show`, `111`)',
                                 'class' => 'font-medium text-red-600 dark:text-red-500 hover:underline ml-2',
                             ])
                         </td>

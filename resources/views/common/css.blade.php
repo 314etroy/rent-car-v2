@@ -1,4 +1,5 @@
 <!--Css-->
+<link rel="stylesheet" href="{{ asset('assets/css/common.css') }}">
 
 {{-- Fonts --}}
 <link rel="stylesheet" href="{{ asset('assets/font/css/all.min.css') }}">

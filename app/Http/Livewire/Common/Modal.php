@@ -3,19 +3,21 @@
 namespace App\Http\Livewire\Common;
 
 use Livewire\Component;
-use Livewire\Attributes\On;
 
 class Modal extends Component
 {
     public $show = false;
 
-    #[On('show')]
-    public function show()
+    protected $listeners = [
+        'show',
+    ];
+
+    public function show(string $value): void
     {
-        dd('onShow()');
+        // dd($value);
         // $data = decryptData($value);
         
         // $this->init($data);
-        // $this->show = !$this->show;
+        $this->show = !$this->show;
     }
 }

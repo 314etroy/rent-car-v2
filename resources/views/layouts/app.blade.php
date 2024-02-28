@@ -23,10 +23,15 @@
 
         @include('app_footer.footer')
 
+
         @include('common.bodyScripts')
 
+        @livewire('components.services-modal', key(uniqid()))
+
         @livewireScripts
+
         @stack('js')
+    
     @endif
 
 </body>
