@@ -1,5 +1,6 @@
-<section id="home" class="section-hero bg-[#161321] relative">
-    {{-- <img class="shape1 absolute w-12 left-72 bottom-36 parallax sm:block hidden" src="assets/img/shape/shape-1.png"
+<section id="home" class="section-hero bg-[#161321] relative"
+    style="background-image: url({{ asset('assets/img/webp/home-img.webp') }}); background-size: cover;">
+    <img class="shape1 absolute w-12 left-72 bottom-36 parallax sm:block hidden" src="assets/img/shape/shape-1.png"
         alt="shape-1">
     <img class="shape2 absolute w-12 top-72 right-32 parallax top sm:block hidden" src="assets/img/shape/shape-2.png"
         alt="shape-2">
