@@ -102,6 +102,10 @@ function hasValue($value, string $stringError)
 
 function isAdmin()
 {
+    if (empty(Auth::user())) {
+        return false;
+    }
+
     return (bool) Auth::user()->is_admin;
 }
 
@@ -117,6 +121,7 @@ function firstElement(array $tableData)
 
 function tableHead(array $tableData, array $startArr = [], array $endArr = [])
 {
+    // dd($tableData);
     $keys = array_keys(firstElement($tableData));
     $start = array_merge($startArr, $keys);
     return array_merge($start, $endArr);

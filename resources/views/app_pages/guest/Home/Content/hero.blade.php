@@ -1,5 +1,5 @@
 <section id="home" class="section-hero bg-[#161321] relative">
-    <img class="shape1 absolute w-12 left-72 bottom-36 parallax sm:block hidden" src="assets/img/shape/shape-1.png"
+    {{-- <img class="shape1 absolute w-12 left-72 bottom-36 parallax sm:block hidden" src="assets/img/shape/shape-1.png"
         alt="shape-1">
     <img class="shape2 absolute w-12 top-72 right-32 parallax top sm:block hidden" src="assets/img/shape/shape-2.png"
         alt="shape-2">
@@ -8,7 +8,8 @@
     <img class="shape4 absolute w-6 bottom-72 left-24 parallax left sm:block hidden" src="assets/img/shape/shape-4.png"
         alt="shape-4">
     <img class="shape5 absolute w-12 bottom-48 right-12 parallax bottom sm:block hidden"
-        src="assets/img/shape/shape-5.png" alt="shape-5">
+        src="assets/img/shape/shape-5.png" alt="shape-5"> --}}
+
     <div
         class="flex flex-wrap justify-between items-center mx-auto mx-auto 2xl:max-w-[1320px] xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] py-[80px] px-4">
         <div class="w-full 2xl:h-[90vh] lg:h-[80vh] h-[70vh] max-[320px]:h-[50vh] flex items-center px-2 2xl:max-w-lg xl:max-w-lg lg:max-w-lg lg:w-1/2 lg:mx-0 md:max-w-lg md:w-1/2 md:mx-0 2xl:w-1/2 xl:w-1/2 sm:items-center"

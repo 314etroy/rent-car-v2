@@ -4,10 +4,10 @@
             'route_name' => 'terms_and_conditions',
             'route_translation' => __('translations.terms_and_conditions'),
         ],
-        [
-            'route_name' => 'return_policy',
-            'route_translation' => __('translations.return_policy'),
-        ],
+        // [
+        //     'route_name' => 'return_policy',
+        //     'route_translation' => __('translations.return_policy'),
+        // ],
         [
             'route_name' => 'cancellation_policy',
             'route_translation' => __('translations.cancellation_policy'),
