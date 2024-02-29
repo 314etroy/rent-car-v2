@@ -9,7 +9,7 @@
     <img class="shape4 absolute w-6 bottom-72 left-24 parallax left sm:block hidden" src="assets/img/shape/shape-4.png"
         alt="shape-4">
     <img class="shape5 absolute w-12 bottom-48 right-12 parallax bottom sm:block hidden"
-        src="assets/img/shape/shape-5.png" alt="shape-5"> --}}
+        src="assets/img/shape/shape-5.png" alt="shape-5">
 
     <div
         class="flex flex-wrap justify-between items-center mx-auto mx-auto 2xl:max-w-[1320px] xl:max-w-[1140px] lg:max-w-[960px] md:max-w-[720px] sm:max-w-[540px] py-[80px] px-4">
