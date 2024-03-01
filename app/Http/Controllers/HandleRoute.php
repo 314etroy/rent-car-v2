@@ -51,11 +51,6 @@ class HandleRoute extends Controller
         return view('app_pages.guest.Gdpr.index');
     }
 
-    public function show_anpc(): View
-    {
-        return view('app_pages.guest.Anpc.index');
-    }
-
     public function show_return_policy(): View
     {
         return view('app_pages.guest.Return_policy.index');
@@ -64,11 +59,6 @@ class HandleRoute extends Controller
     public function show_cancellation_policy(): View
     {
         return view('app_pages.guest.Cancellation_policy.index');
-    }
-
-    public function show_solvit(): View
-    {
-        return view('app_pages.guest.Solvit.index');
     }
 
     public function show_cars(): View

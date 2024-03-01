@@ -1,4 +1,12 @@
+@php
+    $common_links = [
+        'anpc' => 'https://anpc.ro/ce-este-sal/',
+        'solvit' => 'https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home2.show&lng=RO',
+];
+@endphp
+
 @props([
+
     'guest_footer_utils_links' => [
         [
             'route_name' => 'terms_and_conditions',
@@ -18,10 +26,12 @@
         ],
         [
             'route_name' => 'anpc',
+            'link' => $common_links['anpc'],
             'route_translation' => __('translations.anpc'),
         ],
         [
             'route_name' => 'solvit',
+            'link' => $common_links['solvit'],
             'route_translation' => __('translations.solvit'),
         ],
     ],
@@ -70,10 +80,21 @@
                 <p class="text-[20px] text-[#ddd] pt-6 font-bold">Linkuri utile</p>
                 <div class="flex flex-col justify-center items-center mt-5 space-y-2">
                     @foreach ($guest_footer_utils_links ?? [] as $value)
-                        <a href={{ route($value['route_name']) }} wire:navigate class="text-white">
+                        <a href={{ $value['route_name'] !== 'anpc' && $value['route_name'] !== 'solvit' ? route($value['route_name']) : $value['link'] }}
+                            class="text-white">
                             {{ $value['route_translation'] }}
                         </a>
                     @endforeach
+                    <div>
+                        <a href="{{ $common_links['solvit'] }}">
+                            <img src="{{ asset('assets/img/png/sol.png') }}" alt="Solvit" width="200px" height="20px">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="{{ $common_links['anpc'] }}">
+                            <img src="{{ asset('assets/img/png/anpc.png') }}" alt="Anpc" width="200px" height="20px">
+                        </a>
+                    </div>
                 </div>
             </div>
 
@@ -81,7 +102,7 @@
                 <p class="text-[20px] text-[#ddd] pt-6 font-bold">Servicii</p>
                 <div class="flex flex-col mt-5 space-y-2 text-white items-center">
                     @foreach ($guest_footer_services_links ?? [] as $value)
-                        <a href={{ route($value['route_name']) }} wire:navigate class=" text-white">
+                        <a href={{ route($value['route_name']) }} class=" text-white">
                             {{ $value['route_translation'] }}
                         </a>
                     @endforeach

@@ -21,8 +21,6 @@ Route::get('/', [HandleRoute::class, 'show_home'])->name('home');
 Route::get('/' . __('messages.cars'), [HandleRoute::class, 'show_cars'])->name('cars');
 Route::get('/' . __('messages.faqs'), [HandleRoute::class, 'show_faqs'])->name('faqs');
 Route::get('/' . __('messages.gdpr'), [HandleRoute::class, 'show_gdpr'])->name('gdpr');
-Route::get('/' . __('messages.anpc'), [HandleRoute::class, 'show_anpc'])->name('anpc');
-Route::get('/' . __('messages.solvit'), [HandleRoute::class, 'show_solvit'])->name('solvit');
 Route::get('/' . __('messages.contact'), [HandleRoute::class, 'show_contact'])->name('contact');
 Route::get('/' . __('messages.about_us'), [HandleRoute::class, 'show_about_us'])->name('about_us');
 Route::get('/' . __('messages.car_fleet'), [HandleRoute::class, 'show_car_fleet'])->name('car_fleet');
