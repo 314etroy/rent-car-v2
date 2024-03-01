@@ -16,7 +16,8 @@
             'description' => __('translations.faqs'),
         ])
         <div class="mx-auto max-w-7xl bg-white flex justify-center">
-            @include('app_pages.guest.Faqs.Contents.content')
+            @include('common.inWork')
+            {{-- @include('app_pages.guest.Faqs.Contents.content') --}}
         </div>
     </section>
 @endsection

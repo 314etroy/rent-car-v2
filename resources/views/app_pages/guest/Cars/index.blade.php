@@ -9,7 +9,16 @@
 @endpush
 
 @section('content')
-    {{ __('translations.cars') }} Page
+    <section class="mt-20 bg-white">
+        @include('common.generic-page-header', [
+            'imageUrl' => 'assets/img/webp/header-img.webp',
+            'redirectUrl' => route('reserve_now'),
+            'description' => __('translations.cars'),
+        ])
+        <div class="mx-auto max-w-7xl bg-white flex justify-center">
+            @include('common.inWork')
+        </div>
+    </section>
 @endsection
 
 @push('js')
