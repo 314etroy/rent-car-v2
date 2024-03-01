@@ -125,8 +125,8 @@
 
         <div class="flex items-center justify-center mt-10">
             <hr class="flex-grow border-t-2 border-gray-300">
-            <button
-                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded absolute left-1/2 transform -translate-x-1/2">Facebook</button>
+            <a href="https://www.facebook.com/"
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded absolute left-1/2 transform -translate-x-1/2">Facebook</a>
         </div>
     </div>
 </footer>

@@ -23,11 +23,11 @@
                                     <div class="owl-stage">
                                         <div class="owl-item">
                                             <div class="card bg-[#120f1c] rounded-2xl p-6">
-                                                <img src='{{ asset('assets/img/png/toyota-rav4-hybrid.PNG') }}'
-                                                    alt="news-3" class="rounded-2xl">
+                                                <img src='{{ asset('assets/img/png/testimonial_1.PNG') }}'
+                                                    alt="news-3" class="rounded-2xl h-[200px]">
                                                 <div class="news-card-details mt-[16px] ">
                                                     <p class="flex  text-[13px] leading-[30px] mb-[5px] text-[#7963e0]">
-                                                        Tania Andrew <span class="text-gray-400">
+                                                        Daria Mihaela <span class="text-gray-400">
                                                             <div class="flex">
                                                                 @foreach (range(1, 5) as $value)
                                                                     @include('svg.star')
@@ -37,25 +37,17 @@
                                                     </p>
                                                     <h5
                                                         class="text-white pb-[15px] text-[17px] mt-[5px] font-bold border-b border-[#27213b]">
-                                                        "I found solution to all my design needs from Creative Tim. I
-                                                        use them
-                                                        as a freelancer in my hobby projects for fun! And its really
-                                                        affordable,
-                                                        very humble guys !!!"</h5>
-                                                    <div class="pt-[15px] text-sm text-[#7963e0]">Read More <a
-                                                            class="hover:text-[#7963e0]">
-                                                            <i class="fa-solid fa-arrow-right"></i></a>
-                                                    </div>
+                                                        {{ __('translations.translate_testimonial_1') }}</h5>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="owl-item">
                                             <div class="card bg-[#120f1c] rounded-2xl p-6">
-                                                <img src='{{ asset('assets/img/png/toyota-corolla-hybrid.PNG') }}'
-                                                    alt="news-3" class="rounded-2xl">
+                                                <img src='{{ asset('assets/img/png/testimonial_2.PNG') }}'
+                                                    alt="news-3" class="rounded-2xl h-[200px]">
                                                 <div class="news-card-details mt-[16px] ">
                                                     <p class="flex  text-[13px] leading-[30px] mb-[5px] text-[#7963e0]">
-                                                        David Jason <span class="text-gray-400">
+                                                        Ionut Mihai <span class="text-gray-400">
                                                             <div class="flex">
                                                                 @foreach (range(1, 5) as $value)
                                                                     @include('svg.star')
@@ -65,15 +57,7 @@
                                                     </p>
                                                     <h5
                                                         class="text-white pb-[15px] text-[17px] mt-[5px] font-bold border-b border-[#27213b]">
-                                                        "I found solution to all my design needs from Creative Tim. I
-                                                        use them
-                                                        as a freelancer in my hobby projects for fun! And its really
-                                                        affordable,
-                                                        very humble guys !!!"</h5>
-                                                    <div class="pt-[15px] text-sm text-[#7963e0]">Read More <a
-                                                            class="hover:text-[#7963e0]">
-                                                            <i class="fa-solid fa-arrow-right"></i></a>
-                                                    </div>
+                                                        {{ __('translations.translate_testimonial_2') }}</h5>
                                                 </div>
                                             </div>
                                         </div>

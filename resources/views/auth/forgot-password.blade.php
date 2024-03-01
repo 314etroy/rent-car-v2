@@ -1,4 +1,14 @@
-<x-guest-layout>
+@extends('layouts.app')
+
+@section('page_title')
+    {{ __('translations.translate_forgotYourPassword') }}
+@endsection
+
+@push('css')
+    {{-- Zona pentru css-urile folosite la nivel de pagina --}}
+@endpush
+
+@section('content')
     <div class="mb-4 text-sm text-gray-600 dark:text-gray-400">
         {{ __('translations.translate_msg2') }}
     </div>
@@ -12,7 +22,8 @@
         <!-- Email Address -->
         <div>
             <x-input-label for="email" :value="__('translations.translate_email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
+            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required
+                autofocus />
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
 
@@ -22,4 +33,8 @@
             </x-primary-button>
         </div>
     </form>
-</x-guest-layout>
+@endsection
+
+@push('js')
+    {{-- Zona pentru js-urile folosite la nivel de pagina --}}
+@endpush

@@ -11,13 +11,9 @@ return [
     'additional_services_description'   => 'Description',
     'additional_services_price'   => 'Price',
     'additional_services_t_price'   => 'Total Price',
-    
-
 
     'check_out_section' => 'Check Out',
     'finish_section' => 'Finish',
-
-    
 
     'home' => 'Reserve now',
     'reserve_now' => 'Reserve now',
@@ -37,10 +33,13 @@ return [
     'airport_transfer' => 'Airport transfer',
     'car_fleet' => 'Car fleet',
     'check_booking' => 'Check booking',
+    'dashboard' => 'Dashboard',
+    'profile' => 'Profil settings',
+    'logout' => 'Log Out',
 
     'modal_no_fields_msg' => 'Form fields are not defined, contact us.',
     'delete_service_modal_msg' => 'You are sure you want to delete this service?',
-    
+
     'add_service' => 'Add service',
     'edit_service' => 'Edit service',
     'delete_service' => 'Delete service',
@@ -53,10 +52,11 @@ return [
     'service_description' => 'description',
     'service_price' => 'price',
 
-    'translate_login' => 'Login',
+    'translate_login' => 'Log In',
     'translate_rememberMe' => 'Remember Me',
     'translate_forgotYourPassword' => 'Forgot Your Password',
     'translate_password' => 'Password',
+    'translate_name' => 'Name',
     'translate_email' => 'Email',
     'translate_confirm' => 'Confirm',
     'translate_passwordResetLink' => 'Email Password Reset Link',
@@ -64,11 +64,33 @@ return [
     'translate_allreadyRegistered' => 'Allready Registered?',
     'translate_confirmPassword' => 'Confirm Password',
     'translate_resetPassword' => 'Reset Password',
-    'translate_logout' => 'Logout',
+    'translate_logout' => 'Log Out',
     'translate_resendVerificationEmail' => 'Resend Verification Email',
     'translate_msg1' => 'This is a secure area of the application. Please confirm your password before continuing.',
     'translate_msg2' => 'Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.',
     'translate_msg3' => 'A new verification link has been sent to the email address you provided during registration.',
     'translate_msg4' => 'Thanks for signing up! Before getting started, could you verify your email address by clicking on the link we just emailed to you? If you didn\'t receive the email, we will gladly send you another.',
 
+    'translate_profileInformation' => 'Profile Information',
+    'translate_updateAccountNameAndEmail' => "Update your account's profile information and email address.",
+    'translate_emailIsUnverified' => 'Your email address is unverified.',
+    'translate_resendVerificationEmail' => 'Click here to re-send the verification email.',
+    'translate_newVerificationLinkHasBeenSent' => 'A new verification link has been sent to your email address.',
+    'translate_save' => 'Save',
+    'translate_saved' => 'Saved.',
+
+    'translate_updatePassword' => 'Update Password',
+    'translate_longRandomPassword' => 'Ensure your account is using a long, random password to stay secure.',
+    'translate_currentPassword' => 'Current Password',
+    'translate_newPassword' => 'New Password',
+
+    'translate_deleteAccount' => 'Delete Account',
+    'translate_cancel' => 'Cancel',
+    'translate_msg5' => 'Once your account is deleted, all of its resources and data will be permanently deleted. Before deleting your account, please download any data or information that you wish to retain.',
+    'translate_msg6' => 'Once your account is deleted, all of its resources and data will be permanently deleted. Please enter your password to confirm you would like to permanently delete your account.',
+    'translate_areYouSureYouWantToDelete' => 'Are you sure you want to delete your account?',
+
+    'translate_testimonial_1' => '"The rental process was quick and efficient and the car I received was in perfect condition. I highly recommend this agent to anyone looking for a hassle-free rental experience."',
+    'translate_testimonial_2' => '"From the first contact to handing over the car, I was treated with professionalism and kindness. The representative was extremely responsive to my needs and offered me the best solutions for my budget and preferences."',
+    'translate_verifyEmail' => 'Verify Email',
 ];

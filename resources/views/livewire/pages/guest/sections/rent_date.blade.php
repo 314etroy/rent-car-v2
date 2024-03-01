@@ -161,7 +161,7 @@
 
                     <!-- Go to Section 1 Btn -->
                     @include('common.generic-btn', [
-                        'btn_content' => 'Inchiriaza masina',
+                        'btn_content' => 'Inchiriază masina',
                         'wire_method' => 'changeSection("1")',
                         'class' => 'w-full p-2 rounded-md ' . getConstant('modal_generic_colors')['purple'],
                     ])

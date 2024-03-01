@@ -14,9 +14,6 @@
 @endpush
 
 @section('content')
-    <!-- Loader -->
-    {{-- @include('app_pages.guest.Home.Content.loader') --}}
-
     <!-- hero section -->
     @include('app_pages.guest.Home.Content.hero')
 
@@ -32,8 +29,6 @@
     <!-- News -->
     @include('app_pages.guest.Home.Content.testimoniale')
 
-    <!-- contact -->
-    {{-- @include('app_pages.guest.Home.contact') --}}
 @endsection
 
 @push('js')

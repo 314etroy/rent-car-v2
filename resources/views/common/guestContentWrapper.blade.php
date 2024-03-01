@@ -1,8 +1,9 @@
 <!--Guest Content Wrapper-->
 <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100 dark:bg-gray-900">
     <div>
-        <a href="/" wire:navigate>
-            @include('svg.application-logo', ['class' => 'w-20 h-20 fill-current text-gray-500'])
+        <a href="{{ route('home') }}">
+            <img src="{{ asset('assets/img/png/black-logo.png') }}" alt="starent-logo" width="200px"
+                height="60px">
         </a>
     </div>
 

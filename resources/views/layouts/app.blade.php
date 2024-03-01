@@ -14,7 +14,9 @@
 <body class="overflow-x-hidden bg-[#070415]">
 
     @if (isAllowedRoute(getConstant('guestAllowedRoute')))
-        @include('common.guestContentWrapper')
+        @component('common.guestContentWrapper')
+            @yield('content')
+        @endcomponent
     @else
         @component('common.contentWrapper')
             @yield('content')
@@ -23,15 +25,14 @@
 
         @include('app_footer.footer')
 
-        @include('common.bodyScripts')
-
         @livewire('components.services-modal', key(uniqid()))
-
-        @livewireScripts
-
-        @stack('js')
-
     @endif
+
+    @include('common.bodyScripts')
+
+    @livewireScripts
+
+    @stack('js')
 
 </body>
 

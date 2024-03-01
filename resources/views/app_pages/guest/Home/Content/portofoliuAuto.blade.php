@@ -11,7 +11,7 @@
             <div class="portfolio-content" id="MixItUpDA2FB7" data-aos="fade-up" data-aos-duration="2000"
                 data-aos-delay="600">
                 <div class="portfolio-tabs mb-[30px]">
-                    <ul class="2xl:flex xl:flex md:flex sm:block place-content-center text-center">
+                    {{-- <ul class="2xl:flex xl:flex md:flex sm:block place-content-center text-center">
                         <li class="text-[14px] text-[#ddd] 2xl:mx-[10px] sm:mx-[0px] px-[10px] leading-[11px] font-semibold hover:text-[#7963e0] cursor-pointer inline-block active"
                             data-filter="all">
                             ALL</li>
@@ -23,14 +23,14 @@
                             data-filter=".graphics">GRAPHICS</li>
                         <li class="text-[14px] text-[#ddd] 2xl:mx-[10px] sm:mx-[0px] px-[10px] leading-[11px] font-semibold hover:text-[#7963e0] cursor-pointer inline-block"
                             data-filter=".templates">Templates</li>
-                    </ul>
+                    </ul> --}}
                 </div>
                 <div class="portfolio-content-items">
-                    <div class="grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-[30px]">
+                    <div class="grid lg:grid-cols-2 sm:grid-cols-2 grid-cols-1 gap-[30px]">
                         <div class="mix graphics templates">
                             <div class="portfolio-img truncate rounded-2xl relative">
-                                <img src='{{ asset('assets/img/png/renault-megane-sedan.PNG') }}'
-                                    class="w-full transform hover:bg-blue-600 transition duration-500 hover:-rotate-12 hover:scale-125 flex h-[250px] w-full justify-center bg-cover">
+                                <img src='{{ asset('assets/img/jpeg/logan-alb.jpg') }}'
+                                    class="transform hover:bg-blue-600 transition duration-500 hover:-rotate-12 hover:scale-125 flex h-[350px] w-full justify-center bg-cover">
                                 <h3 class="top-contain absolute top-[15px] right-[15px]">
                                     <span class="bg-black rounded-full text-white font-normal text-[12px] px-2 py-1">Cea
                                         mai aleasa masina</span>
@@ -40,8 +40,7 @@
                                 <div class="bottom-contain absolute bottom-4 left-4 right-4">
                                     <div
                                         class="overlay-info px-4 py-2 bg-black bg-opacity-60 rounded-xl grid grid-cols-2 gap-[30px] place-content-between">
-                                        <a href="#" class="text-white text-sm flex items-center">Renault Megane
-                                            Sedan 2023 </a>
+                                        <a href="#" class="text-white text-sm flex items-center">Dacia Logan</a>
                                         <a href="assets/img/portfolio/img-1.jpg" data-fancybox="gallery"
                                             class="text-white text-sm grid justify-items-end">
                                             <p class="hidden">.</p>
@@ -56,8 +55,8 @@
                         </div>
                         <div class="mix design">
                             <div class="portfolio-img truncate rounded-2xl relative">
-                                <img src='{{ asset('assets/img/png/toyota-corolla-hybrid.PNG') }}' alt="design"
-                                    class="w-full transform hover:bg-blue-600 transition duration-500 hover:-rotate-12 hover:scale-125 flex h-[250px] w-full justify-center bg-cover">
+                                <img src='{{ asset('assets/img/jpeg/sandero.jpg') }}' alt="design"
+                                    class="transform hover:bg-blue-600 transition duration-500 hover:-rotate-12 hover:scale-125 flex h-[350px] w-full justify-center bg-cover">
                                 <h3 class="top-contain absolute top-[15px] right-[15px]">
                                     <span class="bg-black rounded-full font-normal text-white text-[12px] px-2 py-1">Cea
                                         mai economica</span>
@@ -65,34 +64,8 @@
                                 <div class="bottom-contain absolute bottom-4 left-4 right-4">
                                     <div
                                         class="overlay-info px-4 py-2 bg-black bg-opacity-60 rounded-xl grid grid-cols-2 gap-[30px] place-content-between">
-                                        <a href="#" class="text-white text-sm flex items-center">Toyota Corrolla
-                                            Hybrid 2023</a>
+                                        <a href="#" class="text-white text-sm flex items-center">Dacia Stepway</a>
                                         <a href="assets/img/portfolio/img-2.jpg" data-fancybox="gallery"
-                                            class="text-white text-sm grid justify-items-end">
-                                            <p class="hidden">.</p>
-                                            <span
-                                                class="bg-[#7963e0] h-8 w-8 flex justify-center items-center rounded-md">
-                                                <i class="fa-solid fa-arrow-right"></i>
-                                            </span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mix design">
-                            <div class="portfolio-img truncate rounded-2xl relative">
-                                <img src='{{ asset('assets/img/png/toyota-rav4-hybrid.PNG') }}' alt="design"
-                                    class="w-full transform hover:bg-blue-600 transition duration-500 hover:-rotate-12 hover:scale-125 flex h-[250px] w-full justify-center bg-cover">
-                                <h3 class="top-contain absolute top-[15px] right-[15px]">
-                                    <span
-                                        class="bg-black rounded-full font-normal text-white text-[12px] px-2 py-1">4X4</span>
-                                </h3>
-                                <div class="bottom-contain absolute bottom-4 left-4 right-4">
-                                    <div
-                                        class="overlay-info px-4 py-2 bg-black bg-opacity-60 rounded-xl grid grid-cols-2 gap-[30px] place-content-between">
-                                        <a href="#" class="text-white text-sm flex items-center">Toyota rav 4
-                                            hybrid 2023</a>
-                                        <a href="assets/img/portfolio/img-3.jpg" data-fancybox="gallery"
                                             class="text-white text-sm grid justify-items-end">
                                             <p class="hidden">.</p>
                                             <span
