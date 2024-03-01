@@ -37,4 +37,19 @@ return [
     'airport_transfer' => 'Airport transfer',
     'car_fleet' => 'Car fleet',
     'check_booking' => 'Check booking',
+
+    'modal_no_fields_msg' => 'Form fields are not defined, contact us.',
+    'delete_service_modal_msg' => 'You are sure you want to delete this service?',
+    
+    'add_service' => 'Add service',
+    'edit_service' => 'Edit service',
+    'delete_service' => 'Delete service',
+
+    'add' => 'Add',
+    'edit' => 'Edit',
+    'delete' => 'Delete',
+
+    'service_title' => 'title',
+    'service_description' => 'description',
+    'service_price' => 'price',
 ];

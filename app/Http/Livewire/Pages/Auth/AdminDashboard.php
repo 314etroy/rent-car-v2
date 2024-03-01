@@ -17,9 +17,9 @@ class AdminDashboard extends Component
 
     public function boot()
     {
-        $this->additionalEquipment = AdditionalEquipment::select(['nume', 'descriere', 'pret'])->get()->toArray();
-        $this->additionalServices = AdditionalService::select(['titlu', 'descriere', 'pret'])->get()->toArray();
-        $this->carSpecifications = CarSpecification::select(['nume', 'transmisie', 'combustibil', 'pret'])->get()->toArray();
+        $this->additionalEquipment = AdditionalEquipment::select(['id', 'nume', 'descriere', 'pret'])->get()->toArray();
+        $this->additionalServices = AdditionalService::select(['id', 'titlu', 'descriere', 'pret'])->get()->toArray();
+        $this->carSpecifications = CarSpecification::select(['id', 'nume', 'transmisie', 'combustibil', 'pret'])->get()->toArray();
     }
 
     public function render()

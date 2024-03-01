@@ -35,4 +35,19 @@ return [
     'airport_transfer' => 'Transfer aeroport',
     'car_fleet' => 'Flota auto',
     'check_booking' => 'Verifica rezervrea',
+
+    'modal_no_fields_msg' => 'Campurile formularului nu sunt definite, contactatine.',
+    'delete_service_modal_msg' => 'Esti sigur ca vrei sa stergi acest serviciu?',
+
+    'add_service' => 'Adauga serviciu',
+    'edit_service' => 'Editeaza serviciu',
+    'delete_service' => 'Sterge serviciu',
+
+    'add' => 'Adauga',
+    'edit' => 'Editeaza',
+    'delete' => 'Sterge',
+
+    'service_title' => 'titlu',
+    'service_description' => 'descriere',
+    'service_price' => 'pret',
 ];

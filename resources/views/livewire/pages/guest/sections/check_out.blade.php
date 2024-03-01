@@ -237,8 +237,7 @@
                         'is_disabled' => false,
                         'btn_content' => 'Continuati cu plata',
                         'wire_method' => 'changeSection("4")',
-                        'class' =>
-                            'bg-blue-500 hover:bg-blue-700 text-white mt-4 w-full p-2 rounded-md cursor-pointer flex justify-center',
+                        'class' => 'w-full p-2 mt-4 rounded-md ' . getConstant('modal_generic_colors')['purple'],
                     ])
 
                 </div>

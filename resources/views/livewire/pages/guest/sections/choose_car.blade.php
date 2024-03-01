@@ -131,7 +131,7 @@
                                             <div class="my-6 flex items-center justify-between px-4">
                                                 <p class="font-bold text-gray-500">{{ $value['product_name'] }}</p>
                                                 <p
-                                                    class="rounded-full bg-blue-500 px-2 py-0.5 text-xs font-semibold text-white">
+                                                    class="rounded-full bg-[#7963e0] px-2 py-0.5 text-xs font-semibold text-white">
                                                     ${{ $value['product_price'] }}</p>
                                             </div>
 
@@ -149,8 +149,7 @@
                                             @include('common.generic-btn', [
                                                 'btn_content' => 'Alege masina',
                                                 'wire_method' => 'changeSection("2")',
-                                                'class' =>
-                                                    'w-full p-2 bg-blue-500 hover:bg-blue-700 text-white border border-gray-300 rounded-md',
+                                                'class' => 'w-full p-2 rounded-md ' . getConstant('modal_generic_colors')['purple'],
                                             ])
 
                                         </div>

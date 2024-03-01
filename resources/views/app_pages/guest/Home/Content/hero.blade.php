@@ -21,7 +21,7 @@
                     class="text-[#fff] 2xl:text-[60px] xl:text-[55px] lg:text-[50px] md:text-[45px] text-[40px] font-bold">
                     Inchirieri auto</h1>
                 <h2 class="py-4 text-[#fff] text-[20px] font-bold">din Campulung Muscel</h2>
-                <p class="pt-2 text-gray-500 text-base">Inchirieri auto in
+                <p class="pt-2 text-white text-base">Inchirieri auto in
                     Romania si in strainatate</p>
                 <button type="button"
                     class="text-white mt-8 bg-[#7963e0] hover:bg-opacity-80 no-underline font-medium rounded-full text-sm px-8 py-2.5 mr-2 dark:bg-blue-600 dark:hover:bg-blue-700">
@@ -29,7 +29,6 @@
             </div>
         </div>
         <div class="w-1/2 hidden px-2 2xl:block xl:block lg:block md:block z-10">
-            {{-- <img src="assets/img/home/girl-dark.png" alt="girl" class="max-h-full"> --}}
             @livewire('pages.guest.common.reserve-now-form')
         </div>
     </div>

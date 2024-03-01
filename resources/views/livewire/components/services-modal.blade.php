@@ -1,49 +1,120 @@
+@props([
+    'inputs' => [
+        [
+            'type' => 'text',
+            'key' => __('translations.service_title'),
+            'inputData' => $name ?? null,
+            'placeholder' => __('translations.service_title'),
+            'wireModelName' => 'modalProps.rowData.titlu',
+            'validLabelClass' => config('constants.common_css.check_out.valid_label'),
+            'errorLabelClass' => config('constants.common_css.check_out.error_label'),
+            'emptyLabelClass' => config('constants.common_css.check_out.empty_label'),
+            'validInputClass' => config('constants.common_css.check_out.valid_input'),
+            'errorInputClass' => config('constants.common_css.check_out.error_input'),
+            'emptyInputClass' => config('constants.common_css.check_out.empty_input'),
+        ],
+        [
+            'type' => 'text',
+            'key' => __('translations.service_description'),
+            'inputData' => $name ?? null,
+            'placeholder' => __('translations.service_description'),
+            'wireModelName' => 'modalProps.rowData.descriere',
+            'validLabelClass' => config('constants.common_css.check_out.valid_label'),
+            'errorLabelClass' => config('constants.common_css.check_out.error_label'),
+            'emptyLabelClass' => config('constants.common_css.check_out.empty_label'),
+            'validInputClass' => config('constants.common_css.check_out.valid_input'),
+            'errorInputClass' => config('constants.common_css.check_out.error_input'),
+            'emptyInputClass' => config('constants.common_css.check_out.empty_input'),
+        ],
+        [
+            'type' => 'text',
+            'key' => __('translations.service_price'),
+            'inputData' => $name ?? null,
+            'placeholder' => __('translations.service_price'),
+            'wireModelName' => 'modalProps.rowData.pret',
+            'validLabelClass' => config('constants.common_css.check_out.valid_label'),
+            'errorLabelClass' => config('constants.common_css.check_out.error_label'),
+            'emptyLabelClass' => config('constants.common_css.check_out.empty_label'),
+            'validInputClass' => config('constants.common_css.check_out.valid_input'),
+            'errorInputClass' => config('constants.common_css.check_out.error_input'),
+            'emptyInputClass' => config('constants.common_css.check_out.empty_input'),
+        ],
+    ],
+])
+
+
 <div>
     <x-generic-modal>
         <x-slot name="modalHeader">
             <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
-                Editeaza serviciu:
+                @switch($modalProps['operation'])
+                    @case('add')
+                        {{ __('translations.add_service') }}
+                    @break
+
+                    @case('edit')
+                        {{ __('translations.edit_service') }}
+                    @break
+
+                    @case('delete')
+                        {{ __('translations.delete_service') }}
+                    @break
+                @endswitch
+
+                <span> {{ $modalProps['operation'] !== 'add' ? $modalProps['rowId'] : null }}</span>
             </h3>
         </x-slot>
 
         <x-slot name="modalBody">
             <div class="p-6">
-                <label for="title-edit-additionalServices-label">
-                    <span>
-                        Title
-                    </span>
 
-                </label>
-                <input type="text" id="title-edit-additionalServices-label" name="title-edit-additionalServices"
-                    placeholder="Adauga titlu" wire:model.live="rawData.service.title"
-                    class="w-full text-gray-700 border border-slate-200 rounded py-3 px-4 mb-4 leading-tight focus:outline-none">
-                <label for="description-edit-additionalServices-label">
-                    <span>
-                        Description
-                    </span>
 
-                </label>
+                @switch($modalProps['operation'])
+                    @case('add')
+                    @case('edit')
+                        @forelse ($inputs ?? [] as $key => $value)
+                            @include('common.genericInputFields', $value)
+                        @empty
+                            <span>{{ __('translations.modal_no_fields_msg') }}</span>
+                        @endforelse
+                    @break
 
-                <textarea id="description-edit-additionalServices-label" name="description-edit-additionalServices" rows="5"
-                    placeholder="Adauga o descriere" wire:model.live="rawData.service.description"
-                    class="w-full text-gray-700 border border-slate-200 rounded py-3 px-4 mb-4 leading-tight focus:outline-none"></textarea>
-                <label for="price-edit-additionalServices-label">
-                    <span>
-                        Price
-                    </span>
+                    @case('delete')
+                        {{ __('translations.delete_service_modal_msg') }}
+                    @break
 
-                </label>
-                <input type="text" id="price-edit-additionalServices-label" name="price-edit-additionalServices"
-                    placeholder="Adauga pret" wire:model.live="rawData.service.price"
-                    class="w-full text-gray-700 border border-slate-200 rounded py-3 px-4 mb-4 leading-tight focus:outline-none">
+                @endswitch
+
+
+
             </div>
         </x-slot>
 
         <x-slot name="modalFooter">
             <div
                 class="flex justify-end items-center p-6 space-x-3 rtl:space-x-reverse border-t border-gray-200 rounded-b dark:border-gray-600">
-                <button
-                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Editeaza</button>
+                @switch($modalProps['operation'])
+                    @case('add')
+                        @include('common.generic-btn', [
+                            'btn_content' => __('translations.add'),
+                            'class' => getConstant('modal_generic_colors')['green'],
+                        ])
+                    @break
+
+                    @case('edit')
+                        @include('common.generic-btn', [
+                            'btn_content' => __('translations.edit'),
+                            'class' => getConstant('modal_generic_colors')['blue'],
+                        ])
+                    @break
+
+                    @case('delete')
+                        @include('common.generic-btn', [
+                            'btn_content' => __('translations.delete'),
+                            'class' => getConstant('modal_generic_colors')['red'],
+                        ])
+                    @break
+                @endswitch
             </div>
         </x-slot>
     </x-generic-modal>

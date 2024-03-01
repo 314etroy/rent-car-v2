@@ -12,12 +12,13 @@ class Modal extends Component
         'show',
     ];
 
-    public function show(string $value): void
+    public function show(array $data): void
     {
-        // dd($value);
         // $data = decryptData($value);
-        
-        // $this->init($data);
+        // dd($data);
+
+        $this->init($data);
+
         $this->show = !$this->show;
     }
 }

@@ -72,12 +72,12 @@
     @case(in_array($type, $commonTypeHTML))
         <input type="{{ $type }}" {!! setProperties('id', $key) !!} {!! setProperties('name', $key) !!} {!! setProperties('style', $style) !!} {!! setProperties('step', $step) !!}
             {!! setProperties('required', $isRequired) !!} {!! setProperties('disabled', $isDisabled) !!} {!! setProperties('multiple', $isMultiple) !!} {!! setProperties('aria-label', $ariaLabel) !!}
-            {!! setProperties('placeholder', $placeholder, $type) !!} {!! setProperties($wireModelType ?? 'wire:model.live', $wireModelName) !!} {!! setProperties('class', $errors->has($wireModelName) ? $errorInputClass : $emptyInputClass) !!} />
+            {!! setProperties('placeholder', ucfirst($placeholder), $type) !!} {!! setProperties($wireModelType ?? 'wire:model.live', $wireModelName) !!} {!! setProperties('class', $errors->has($wireModelName) ? $errorInputClass : $emptyInputClass) !!} />
     @break
 
     @case('textarea')
         <textarea {!! setProperties('id', $key) !!} {!! setProperties('name', $key) !!} {!! setProperties('rows', $rows) !!} {!! setProperties('style', $style) !!}
-            {!! setProperties('required', $isRequired) !!} {!! setProperties('disabled', $isDisabled) !!} {!! setProperties('aria-label', $ariaLabel) !!} {!! setProperties('placeholder', $placeholder) !!}
+            {!! setProperties('required', $isRequired) !!} {!! setProperties('disabled', $isDisabled) !!} {!! setProperties('aria-label', $ariaLabel) !!} {!! setProperties('placeholder', ucfirst($placeholder)) !!}
             {!! setProperties($wireModelType ?? 'wire:model.live', $wireModelName) !!} {!! setProperties('class', $errors->has($wireModelName) ? $errorInputClass : $emptyInputClass) !!}></textarea>
     @break
 

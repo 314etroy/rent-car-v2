@@ -119,9 +119,8 @@ function firstElement(array $tableData)
     return reset($tableData);
 }
 
-function tableHead(array $tableData, array $startArr = [], array $endArr = [])
+function tableHead(array $tableData, array $endArr = [], array $startArr = [])
 {
-    // dd($tableData);
     $keys = array_keys(firstElement($tableData));
     $start = array_merge($startArr, $keys);
     return array_merge($start, $endArr);
@@ -129,7 +128,6 @@ function tableHead(array $tableData, array $startArr = [], array $endArr = [])
 
 function modifArray(array $arr = [], array $modif = [])
 {
-
     foreach ($arr as &$item) {
         if (isset($item['key'])) {
             $item['key'] .= $modif['key'];
@@ -137,4 +135,49 @@ function modifArray(array $arr = [], array $modif = [])
     }
 
     return $arr;
+}
+
+function handleModalAddData(string $operation = '', bool $inhibModalClosure = false)
+{
+    $dataToEncode = [];
+
+    if (isset($operation)) {
+        $dataToEncode['operation'] = $operation;
+    }
+
+    if (isset($inhibModalClosure)) {
+        $dataToEncode['inhibModalClosure'] = $inhibModalClosure;
+    }
+
+    return json_encode($dataToEncode);
+}
+
+function handleModalData(int $rowId, string $operation = '', array $modalData = [], bool $inhibModalClosure = false)
+{
+    $dataToEncode = [];
+
+    if (isset($operation)) {
+        $dataToEncode['operation'] = $operation;
+    }
+
+    if (isset($rowId)) {
+        $dataToEncode['rowId'] = $rowId + 1;
+    }
+
+    if (isset($inhibModalClosure)) {
+        $dataToEncode['inhibModalClosure'] = $inhibModalClosure;
+    }
+
+    $dataToEncode['id'] = $modalData['id'];
+
+    unset($modalData['id']);
+
+    $dataToEncode['rowData'] = $modalData;
+
+    return json_encode($dataToEncode);
+}
+
+function handleEmitTo(string $componentPath, string $methodName, $data)
+{
+    return '$emitTo("' . $componentPath . '", "' . $methodName . '" ,' . $data . ')';
 }

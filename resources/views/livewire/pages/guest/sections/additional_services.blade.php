@@ -163,8 +163,7 @@
                                             @include('common.generic-btn', [
                                                 'btn_content' => 'Alege',
                                                 'wire_method' => 'changeSection("3")',
-                                                'class' =>
-                                                    'w-full p-2 bg-blue-500 hover:bg-blue-700 text-white border border-gray-300 rounded-md',
+                                                'class' => 'w-full p-2 rounded-md ' . getConstant('modal_generic_colors')['purple'],
                                             ])
                                         </div>
                                     </div>

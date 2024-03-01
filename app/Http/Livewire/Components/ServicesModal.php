@@ -45,7 +45,6 @@ class ServicesModal extends Modal
         'rowData' => null,
         'operation' => null,
         'inhibModalClosure' => false,
-        'itemType' => null,
     ];
 
     // public function boot()
@@ -53,16 +52,14 @@ class ServicesModal extends Modal
     //     $this->modalDataInit = $this->modalData;
     // }
 
-    // protected function init(array $data): void
-    // {
-    //     empty($data['itemType']) && exit;
+    protected function init(array $data): void
+    {
+        empty($data) && exit;
 
-    //     $this->modalProps = $data;
+        $this->modalProps = $data;
 
-    //     $this->setModal($data['itemType']);
-    //     $this->reseFormFields();
-    //     $this->handleModalData($data);
-    // }
+        // $this->setModal($data['type']);
+    }
 
     // private function reseFormFields(): void
     // {
@@ -152,45 +149,45 @@ class ServicesModal extends Modal
     //     $this->modalData['rightFormFields']['slug']['value'] = Str::slug($value);
     // }
 
-    // public function create(): void
-    // {
-    //     // $this->emit('initModalPlugins');
+    public function create(): void
+    {
+        // $this->emit('initModalPlugins');
 
-    //     $this->setRulesAndMessages();
-    //     $this->handleFormValidation();
-    // }
+        $this->setRulesAndMessages();
+        $this->handleFormValidation();
+    }
 
-    // public function update(): void
-    // {
-    //     // cand nu s-a schimbat nimic in datele din modal-ul de update
-    //     if ($this->modalData['initFormData'] == $this->modalData['rightFormFields']) {
-    //         dd('fara schimbare');
-    //         $this->closeModal();
-    //         return;
-    //     }
+    public function update(): void
+    {
+        // cand nu s-a schimbat nimic in datele din modal-ul de update
+        if ($this->modalData['initFormData'] == $this->modalData['rightFormFields']) {
+            dd('fara schimbare');
+            $this->closeModal();
+            return;
+        }
 
-    //     $this->setRulesAndMessages();
-    //     $this->handleFormValidation();
-    // }
+        $this->setRulesAndMessages();
+        $this->handleFormValidation();
+    }
 
-    // public function delete(): void
-    // {
-    //     [
-    //         'rowId' => $rowId,
-    //         'rowData' => $rowData,
-    //         'itemType' => $itemType,
-    //     ] = $this->modalProps;
+    public function delete(): void
+    {
+        [
+            'rowId' => $rowId,
+            'rowData' => $rowData,
+            'itemType' => $itemType,
+        ] = $this->modalProps;
 
-    //     $idsToDelete = $this->getKeys($rowData);
+        $idsToDelete = $this->getKeys($rowData);
 
-    //     empty($idsToDelete) && exit;
+        empty($idsToDelete) && exit;
 
-    //     $this->modalData['dbModal']::actionDelete($idsToDelete);
-    //     $this->modalData['dbBase']::actionDelete($rowId);
-    //     $this->modalData['dbStatus']::updateTime($itemType);
+        $this->modalData['dbModal']::actionDelete($idsToDelete);
+        $this->modalData['dbBase']::actionDelete($rowId);
+        $this->modalData['dbStatus']::updateTime($itemType);
 
-    //     $this->closeModal(true);
-    // }
+        $this->closeModal(true);
+    }
 
     // // ---------------- Metode Viitoare la care inca lucrez ---------------- //
 
@@ -278,50 +275,50 @@ class ServicesModal extends Modal
     //     }
     // }
 
-    // private function setRulesAndMessages(): void
-    // {
-    //     $arr_keys = array_keys($this->modalData['rightFormFields']);
+    private function setRulesAndMessages(): void
+    {
+        $arr_keys = array_keys($this->modalData['rightFormFields']);
 
-    //     foreach ($arr_keys as $rule) {
-    //         $this->rules['modalData.rightFormFields.' . $rule . '.value'] = 'required';
-    //         $this->messages['modalData.rightFormFields.' . $rule . '.value.required'] = 'The ' . str_replace("_", " ", $rule) . ' is required.';
-    //     }
-    // }
+        foreach ($arr_keys as $rule) {
+            $this->rules['modalData.rightFormFields.' . $rule . '.value'] = 'required';
+            $this->messages['modalData.rightFormFields.' . $rule . '.value.required'] = 'The ' . str_replace("_", " ", $rule) . ' is required.';
+        }
+    }
 
-    // private function handleFormValidation(): void
-    // {
-    //     [
-    //         'rowId' => $rowId,
-    //         'rowData' => $rowData,
-    //         'itemType' => $itemType,
-    //         'selectedLanguage' => $selectedLanguage,
-    //     ] = $this->modalProps;
+    private function handleFormValidation(): void
+    {
+        [
+            'rowId' => $rowId,
+            'rowData' => $rowData,
+            'itemType' => $itemType,
+            'selectedLanguage' => $selectedLanguage,
+        ] = $this->modalProps;
 
-    //     $rules = $this->rules;
+        $rules = $this->rules;
 
-    //     try {
-    //         $this->validate($rules);
-    //         $validatedData = $this->retrieveFormData($this->modalData['rightFormFields']);
+        try {
+            $this->validate($rules);
+            $validatedData = $this->retrieveFormData($this->modalData['rightFormFields']);
 
-    //         $updateArray = ['lang' => $selectedLanguage];
+            $updateArray = ['lang' => $selectedLanguage];
 
-    //         if (empty($rowData)) {
-    //             $newBaseEntry = $this->modalData['dbBase']::actionCreate(['type' => $itemType]);
-    //             $updateArray['relation_data_id'] = $newBaseEntry->id;
-    //         } else {
-    //             $updateArray['relation_data_id'] = $rowId;
-    //         }
+            if (empty($rowData)) {
+                $newBaseEntry = $this->modalData['dbBase']::actionCreate(['type' => $itemType]);
+                $updateArray['relation_data_id'] = $newBaseEntry->id;
+            } else {
+                $updateArray['relation_data_id'] = $rowId;
+            }
 
-    //         $this->modalData['dbModal']::actionCreateOrUpdate($updateArray, $validatedData);
-    //         $this->modalData['dbStatus']::updateTime($itemType);
+            $this->modalData['dbModal']::actionCreateOrUpdate($updateArray, $validatedData);
+            $this->modalData['dbStatus']::updateTime($itemType);
 
-    //         $this->closeModal(true);
-    //     } catch (\Illuminate\Validation\ValidationException $e) {
-    //         // $errors = $e->validator->getMessageBag();
-    //         // dd($errors) // to see the errors
-    //         $this->validate($rules);
-    //     }
-    // }
+            $this->closeModal(true);
+        } catch (\Illuminate\Validation\ValidationException $e) {
+            // $errors = $e->validator->getMessageBag();
+            // dd($errors) // to see the errors
+            $this->validate($rules);
+        }
+    }
 
     // private function retrieveFormData(array $data): array
     // {
