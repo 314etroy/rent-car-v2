@@ -31,6 +31,6 @@
     </div>
     <div class="relative">
         <img src="assets/img/shape/hero-shape-dark.png" alt="hero-shape"
-            class="absolute bottom-0 left-0 right-0 w-full bg-center z-10 bg-cover">
+            class="absolute bottom-0 left-0 right-0 w-full bg-center z-10 bg-cover border-b border-[#120f1c]">
     </div>
 </section>
