@@ -1,6 +1,7 @@
 @php
     $common_links = [
         'anpc' => 'https://anpc.ro/ce-este-sal/',
+        'netopia' => 'https://netopia-payments.com/',
         'solvit' => 'https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home2.show&lng=RO',
 ];
 @endphp
@@ -119,6 +120,12 @@
                         <li>Sambata: 08:00 - 14:00</li>
                         <li>Duminica: <b class="text-red-700">inchis</b></li>
                     </ul>
+                </div>
+
+                <div class="mt-10">
+                    <a href="{{ $common_links['netopia'] }}">
+                        <img src="{{ asset('assets/img/png/netopia.png') }}" alt="Netopia" width="200px" height="20px">
+                    </a>
                 </div>
             </div>
         </div>

@@ -20,7 +20,7 @@ return [
     'home' => 'Rezerva acum',
     'reserve_now' => 'Rezerva acum',
     'about_us' => 'Despre noi',
-    'faqs' => 'Intrebari frecvente',
+    'faqs' => 'Întrebări frecvente',
     'terms_and_conditions' => 'Termeni si conditii',
     'privacy_notice' => 'Politica de confidentialitate',
     'rental_conditions' => 'Conditii de inchiriere',

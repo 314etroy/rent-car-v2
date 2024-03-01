@@ -9,16 +9,14 @@
 @endpush
 
 @section('content')
-    <section class="mt-4 bg-[#161321]">
-
-        <div class="mx-auto max-w-7xl px-4 bg-[#161321] flex justify-center">
-            <div class="py-9">
-                <div class="text-center text-white md:text-3xl text-xl font-semibold my-5">
-
-                    {{ __('translations.cancellation_policy_title') }}
-                </div>
-                @include('app_pages.guest.Cancellation_policy.Contents.content')
-            </div>
+    <section class="mt-20 bg-[#161321]">
+        @include('common.generic-page-header', [
+            'imageUrl' => 'assets/img/webp/header-img.webp',
+            'redirectUrl' => route('reserve_now'),
+            'description' => __('translations.cancellation_policy_title'),
+        ])
+        <div class="mx-auto max-w-7xl bg-[#161321] flex justify-center">
+            @include('app_pages.guest.Cancellation_policy.Contents.content')
         </div>
     </section>
 @endsection

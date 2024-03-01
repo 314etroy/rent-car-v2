@@ -21,6 +21,8 @@ export default {
         "border-blue-500",
         "border-red-500",
         "focus:ring-red-500",
+        "w-[400px]",
+        "h-[40px]",
     ],
 
     theme: {
