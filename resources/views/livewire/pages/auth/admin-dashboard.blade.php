@@ -57,7 +57,7 @@
                                 'wire_method' => handleEmitTo(
                                     $emitToPath,
                                     $emitToMethod,
-                                    handleModalData($index, 'edit', $rowData, true)),
+                                    handleModalData($index, 'edit', $rowData)),
                                 'class' => 'font-medium text-blue-600 dark:text-blue-500 hover:underline mr-2',
                             ])
 
@@ -66,7 +66,7 @@
                                 'wire_method' => handleEmitTo(
                                     $emitToPath,
                                     $emitToMethod,
-                                    handleModalData($index, 'delete', $rowData, false)),
+                                    handleModalData($index, 'delete', $rowData)),
                                 'class' => 'font-medium text-red-600 dark:text-red-500 hover:underline ml-2',
                             ])
                         </td>

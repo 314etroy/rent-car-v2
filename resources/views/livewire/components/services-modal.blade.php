@@ -68,7 +68,6 @@
         <x-slot name="modalBody">
             <div class="p-6">
 
-
                 @switch($modalProps['operation'])
                     @case('add')
                     @case('edit')
@@ -84,8 +83,6 @@
                     @break
 
                 @endswitch
-
-
 
             </div>
         </x-slot>
