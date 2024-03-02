@@ -7,51 +7,34 @@
 @endphp
 
 @props([
-    // 'sort_options' => ['Most Popular', 'Best Rating', 'Newest', 'Price: Low to High', 'Price: High to Low'],
     'product_details' => [
         [
-            'product_name' => 'Dacia Logan',
+            'product_name' => 'Dacia Logan Expression Tce 90 MT6',
             'product_code' => 'logan',
             'product_price' => '120',
             'product_options' => [
                 [
-                    'name' => 'First option',
-                    'info' => 23,
+                    'name' => 'Culoare',
+                    'info' => 'GLACF ARTIC WHITE',
                 ],
                 [
-                    'name' => 'Second option',
-                    'info' => 23,
-                ],
-                [
-                    'name' => 'Third option',
-                    'info' => 1,
-                ],
-                [
-                    'name' => 'Fourth option',
-                    'info' => 23,
+                    'name' => 'Tapiterie',
+                    'info' => 'DRAP10 Tapiterie Comfort',
                 ],
             ],
         ],
         [
-            'product_name' => 'Dacia Stepway',
+            'product_name' => 'Dacia Spring Extreme',
             'product_code' => 'stepway',
             'product_price' => '120',
             'product_options' => [
                 [
-                    'name' => 'First option',
-                    'info' => 23,
+                    'name' => 'Culoare',
+                    'info' => 'MOTON CENOTE BLUE',
                 ],
                 [
-                    'name' => 'Second option',
-                    'info' => 23,
-                ],
-                [
-                    'name' => 'Third option',
-                    'info' => 1,
-                ],
-                [
-                    'name' => 'Fourth option',
-                    'info' => 23,
+                    'name' => 'Tapiterie',
+                    'info' => 'DRAP10 Tapiterie Comfort',
                 ],
             ],
         ],
@@ -124,15 +107,15 @@
                                 <div class="mx-auto px-5 mb-4">
                                     <div
                                         class="cursor-pointer rounded-lg bg-white p-2 shadow duration-150 hover:scale-105 hover:shadow-md w-full">
-                                        <img class="w-full rounded-lg object-cover object-center flex-shrink-0"
-                                            src="{{ $value['product_code'] === 'logan' ? asset('assets/img/jpeg/logan-alb.jpg') : asset('assets/img/jpeg/sandero.jpg') }}"
+                                        <img class="w-full h-[400px] rounded-lg object-cover object-center flex-shrink-0"
+                                            src="{{ $value['product_code'] === 'logan' ? asset('assets/img/jpeg/logan-alb.jpg') : asset('assets/img/jpeg/spring.jpg') }}" 
                                             alt="{{ $value['product_code'] }}" />
                                         <div>
                                             <div class="my-6 flex items-center justify-between px-4">
                                                 <p class="font-bold text-gray-500">{{ $value['product_name'] }}</p>
                                                 <p
                                                     class="rounded-full bg-[#7963e0] px-2 py-0.5 text-xs font-semibold text-white">
-                                                    ${{ $value['product_price'] }}</p>
+                                                    {{ $value['product_price'] }} Lei</p>
                                             </div>
 
                                             @foreach ($value['product_options'] ?? [] as $option)

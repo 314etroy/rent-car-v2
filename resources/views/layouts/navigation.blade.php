@@ -35,6 +35,14 @@
 
                     @auth
                         <!-- Admin Navigation Links -->
+                        @foreach ($guest_links ?? [] as $value)
+                            <div class="hidden space-x-8 md:-my-px md:ms-3 md:flex">
+                                <x-nav-link :href="route($value['route_name'])" :active="request()->routeIs($value['route_name'])">
+                                    {{ $value['route_translation'] }}
+                                </x-nav-link>
+                            </div>
+                        @endforeach
+
                         <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex ">
                             <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')" class="text-white">
                                 {{ __('translations.dashboard') }}
