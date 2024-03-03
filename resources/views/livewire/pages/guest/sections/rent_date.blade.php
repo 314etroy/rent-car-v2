@@ -130,7 +130,8 @@
 
     <div class="mx-auto max-w-7xl px-4 bg-white flex justify-center">
         <div class="py-9">
-            <div class="container relative w-[500px]">
+            {{-- <div class="container relative w-[500px] "> --}}
+            <div class="container relative text-[12px] sm:text-[18px]">
 
                 <div class="text-center">
                     <h1 class="text-4xl font-bold tracking-tight text-gray-900 pt-6">Închiriază o mașină ușor și rapid
@@ -143,16 +144,16 @@
                         <!-- First Column -->
                         <div>
                             @foreach ($firstColumn ?? [] as $value)
-                                <div class="mb-4">
+                                <div class="mb-4 ">
                                     @include('common.genericInputFields', $value)
                                 </div>
                             @endforeach
                         </div>
 
                         <!-- Second Column -->
-                        <div class="{{ $return_to_another_location ?? null ? '' : 'mt-[26px]' }}">
+                        <div class="{{ $return_to_another_location ?? null ? '' : 'mt-[26px]' }} ">
                             @foreach ($secondColumn ?? [] as $index => $value)
-                                <div class="{{ $value['type'] === 'hidden' ? '' : 'mb-4' }}">
+                                <div class="{{ $value['type'] === 'hidden' ? '' : 'mb-4' }} ">
                                     @include('common.genericInputFields', $value)
                                 </div>
                             @endforeach

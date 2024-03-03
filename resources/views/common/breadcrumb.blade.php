@@ -12,8 +12,7 @@
 <section class="bg-white mt-20">
     <div class="max-w-7xl mx-auto">
         <!-- Breadcrumb Nav -->
-        <nav class="bg-white flex justify-center px-5 py-3 text-gray-700"
-            aria-label="Breadcrumb">
+        <nav class="bg-white flex justify-center px-5 py-3 text-gray-700" aria-label="Breadcrumb">
             <ol class="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
 
                 @foreach ($breadcrumbButtons ?? [] as $index => $value)

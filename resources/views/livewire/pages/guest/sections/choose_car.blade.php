@@ -118,7 +118,7 @@
                     <div class="col-span-6">
                         <!-- Your content -->
 
-                        <div class="grid grid-cols-2">
+                        <div class="grid grid-cols-1 sm:grid-cols-2">
 
                             @foreach ($product_details ?? [] as $value)
                                 <div class="mx-auto px-5 mb-4">
@@ -149,7 +149,9 @@
                                             @include('common.generic-btn', [
                                                 'btn_content' => 'Alege masina',
                                                 'wire_method' => 'changeSection("2")',
-                                                'class' => 'w-full p-2 rounded-md ' . getConstant('modal_generic_colors')['purple'],
+                                                'class' =>
+                                                    'w-full p-2 rounded-md ' .
+                                                    getConstant('modal_generic_colors')['purple'],
                                             ])
 
                                         </div>

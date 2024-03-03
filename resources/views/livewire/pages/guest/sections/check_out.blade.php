@@ -191,41 +191,44 @@
                     {{ __('translations.additional_services_complete_order') }}</h1>
             </div>
 
-            <div class="grid grid-cols-2">
-                <div class="col-span-1">
+            <div class="grid grid-cols-1 sm:grid-cols-2">
+                <div class="col-span-1 px-[3rem]">
                     <table class="w-full">
                         <thead>
                             <tr>
-                                <th class="text-left">{{ __('translations.additional_services_description') }}</th>
-                                <th class="text-left">{{ __('translations.additional_services_price') }}</th>
+                                <th class="text-center w-1/2">{{ __('translations.additional_services_description') }}
+                                </th>
+                                <th class="text-center w-1/2">{{ __('translations.additional_services_price') }}</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach ($left_table ?? [] as $value)
                                 <tr>
-                                    <td class="py-2">{{ $value['description'] }}</td>
-                                    <td class="py-2">${{ $value['price'] }}</td>
+                                    <td class="py-2 text-center">{{ $value['description'] }}</td>
+                                    <td class="py-2 text-center">${{ $value['price'] }}</td>
                                 </tr>
                             @endforeach
 
                             <tr>
-                                <td class="py-2" colspan="2">{{ __('translations.additional_services_section') }}
+                                <td class="py-2 font-bold text-center" colspan="1">
+                                    {{ __('translations.additional_services_section') }}
                                 </td>
                             </tr>
                             @foreach ($left_aditional_services ?? [] as $value)
                                 <tr>
-                                    <td class="p-3">{{ $value['description'] }}</td>
-                                    <td class="py-2">${{ $value['price'] }}</td>
+                                    <td class="p-3 text-center">{{ $value['description'] }}</td>
+                                    <td class="py-2 text-center">${{ $value['price'] }}</td>
                                 </tr>
                             @endforeach
                             <tr>
-                                <td class="py-2 font-bold">{{ __('translations.additional_services_t_price') }}:</td>
-                                <td class="py-2 font-bold">$XXXX</td>
+                                <td class="py-2 font-bold text-center">
+                                    {{ __('translations.additional_services_t_price') }}:</td>
+                                <td class="py-2 font-bold text-center">$XXXX</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-                <div class="col-span-1">
+                <div class="col-span-1 px-[3rem] mt-[2rem] sm:mt-[0]">
 
                     <!-- Input fields -->
                     @foreach ($right_inputs ?? [] as $value)

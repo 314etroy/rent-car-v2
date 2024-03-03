@@ -163,7 +163,9 @@
                                             @include('common.generic-btn', [
                                                 'btn_content' => 'Alege',
                                                 'wire_method' => 'changeSection("3")',
-                                                'class' => 'w-full p-2 rounded-md ' . getConstant('modal_generic_colors')['purple'],
+                                                'class' =>
+                                                    'w-full p-2 rounded-md ' .
+                                                    getConstant('modal_generic_colors')['purple'],
                                             ])
                                         </div>
                                     </div>
@@ -202,7 +204,7 @@
                         {{ __('translations.additional_services_car_detail') }}</h1>
                 </div>
 
-                <div class="grid grid-cols-3 lg:max-w-none lg:mx-0 max-w-2xl mx-auto sm:mt-14">
+                <div class="grid grid-cols-2 sm:grid-cols-3 lg:max-w-none lg:mx-0 max-w-2xl mx-auto sm:mt-14">
                     <div class="p-8 sm:p-10 lg:flex-auto col-span-2">
                         <h3 class="text-2xl font-bold tracking-tight text-gray-900">
                             {{ __('translations.additional_services_car_name') }}</h3>
@@ -224,7 +226,7 @@
                             @endforeach
                         </ul>
                     </div>
-                    <div class="p-2 col-span-1 flex">
+                    <div class="p-2 col-span-2 sm:col-span-1 flex">
                         <img class="w-full rounded-lg object-cover object-center flex-shrink-0"
                             src="https://images.unsplash.com/photo-1580477371194-4593e3c7c6cf?q=80&amp;w=2070&amp;auto=format&amp;fit=crop&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                             alt="product">
