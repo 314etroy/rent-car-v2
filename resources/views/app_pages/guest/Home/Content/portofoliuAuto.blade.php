@@ -40,8 +40,8 @@
                                 <div class="bottom-contain absolute bottom-4 left-4 right-4">
                                     <div
                                         class="overlay-info px-4 py-2 bg-black bg-opacity-60 rounded-xl grid grid-cols-2 gap-[30px] place-content-between">
-                                        <a href="#" class="text-white text-sm flex items-center">Dacia Logan</a>
-                                        <a href="assets/img/portfolio/img-1.jpg" data-fancybox="gallery"
+                                        <a href="#" class="text-white text-sm flex items-center">Dacia Logan Expression Tce 90 MT6</a>
+                                        <a href="{{ asset('assets/img/jpeg/logan-alb.jpg') }}" data-fancybox="gallery"
                                             class="text-white text-sm grid justify-items-end">
                                             <p class="hidden">.</p>
                                             <span
@@ -55,7 +55,7 @@
                         </div>
                         <div class="mix design">
                             <div class="portfolio-img truncate rounded-2xl relative">
-                                <img src='{{ asset('assets/img/jpeg/sandero.jpg') }}' alt="design"
+                                <img src='{{ asset('assets/img/jpeg/spring.jpg') }}' alt="design"
                                     class="transform hover:bg-blue-600 transition duration-500 hover:-rotate-12 hover:scale-125 flex h-[350px] w-full justify-center bg-cover">
                                 <h3 class="top-contain absolute top-[15px] right-[15px]">
                                     <span class="bg-black rounded-full font-normal text-white text-[12px] px-2 py-1">Cea
@@ -64,8 +64,8 @@
                                 <div class="bottom-contain absolute bottom-4 left-4 right-4">
                                     <div
                                         class="overlay-info px-4 py-2 bg-black bg-opacity-60 rounded-xl grid grid-cols-2 gap-[30px] place-content-between">
-                                        <a href="#" class="text-white text-sm flex items-center">Dacia Stepway</a>
-                                        <a href="assets/img/portfolio/img-2.jpg" data-fancybox="gallery"
+                                        <a href="#" class="text-white text-sm flex items-center">Dacia Spring Extreme</a>
+                                        <a href="{{ asset('assets/img/jpeg/spring.jpg') }}" data-fancybox="gallery"
                                             class="text-white text-sm grid justify-items-end">
                                             <p class="hidden">.</p>
                                             <span
