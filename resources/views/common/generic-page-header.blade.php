@@ -2,7 +2,7 @@
     'imageUrl' => '',
     'description' => '',
     'redirectUrl' => '',
-    'width' => 'full',
+    // 'width' => '400px',
     'height' => '40px',
 ])
 
@@ -15,12 +15,7 @@
             'href' => $redirectUrl,
             'wire_method' => 'changeSection("1")',
             'class' =>
-                'sm:w-' .
-                $width .
-                ' h-[' .
-                $height .
-                '] w-1/2 p-2 rounded-md ' .
-                getConstant('modal_generic_colors')['purple'],
+                ' h-[' . $height . '] w-1/2 p-2 rounded-md ' . getConstant('modal_generic_colors')['purple'],
         ])
     </div>
 </div>
